@@ -9,16 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/coreapp" />
-            <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/library" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/lib" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/lib" />
           </set>
         </option>
       </GradleProjectSettings>
