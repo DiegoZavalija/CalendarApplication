@@ -26,7 +26,7 @@ public class TerminalGrid
     
     public static class BoxChars 
     { 
-        private String[] chars;
+        private final String[] chars;
         public BoxChars(String... chars)
         {
             this.chars = chars;
@@ -39,13 +39,13 @@ public class TerminalGrid
     }
 
     public static final BoxChars UNICODE_BOX_CHARS = new BoxChars(
-        /*LEFT:*/ "\u2502 ", /*MID_VERTICAL:*/ " \u2502 ", /*RIGHT*/" \u2502", 
-        /*TOP:*/ "\u2500", /*MID_HORIZONTAL:*/ "\u2500", /*BOTTOM:*/ "\u2500", 
-        /*TOP_LEFT:*/ "\u250c\u2500", /*TOP_RIGHT:*/"\u2500\u2510", 
-        /*BOTTOM_LEFT:*/ "\u2514\u2500", /*BOTTOM_RIGHT:*/ "\u2500\u2518", 
-        /*MID_TOP:*/ "\u2500\u252c\u2500", /*MID_BOTTOM:*/ "\u2500\u2534\u2500", 
-        /*MID_LEFT:*/ "\u251c\u2500", /*MID_RIGHT:*/ "\u2500\u2524", 
-        /*MID:*/ "\u2500\u253c\u2500");
+        /*LEFT:*/ "│ ", /*MID_VERTICAL:*/ " │ ", /*RIGHT*/" │",
+        /*TOP:*/ "─", /*MID_HORIZONTAL:*/ "─", /*BOTTOM:*/ "─",
+        /*TOP_LEFT:*/ "┌─", /*TOP_RIGHT:*/"─┐",
+        /*BOTTOM_LEFT:*/ "└─", /*BOTTOM_RIGHT:*/ "─┘",
+        /*MID_TOP:*/ "─┬─", /*MID_BOTTOM:*/ "─┴─",
+        /*MID_LEFT:*/ "├─", /*MID_RIGHT:*/ "─┤",
+        /*MID:*/ "─┼─");
     public static final BoxChars ASCII_BOX_CHARS = new BoxChars(
         "| ", " | ", " |", "-", "-", "-", "/-", "-\\", "\\-", "-/", "-+-", "-+-", "+-", "-+", "-+-");
         
@@ -306,10 +306,7 @@ public class TerminalGrid
         var newGrid = new String[nRows][nCols];
         for(int rowN = rowOffset; rowN < nRows; rowN++)
         {
-            for(int colN = colOffset; colN < nCols; colN++)
-            {
-                newGrid[rowN][colN] = origGrid[rowN - rowOffset][colN - colOffset];
-            }
+            System.arraycopy(origGrid[rowN - rowOffset], 0, newGrid[rowN], colOffset, nCols - colOffset);
         }
         
         if(rowHeadings != null)
