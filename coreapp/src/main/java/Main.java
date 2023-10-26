@@ -14,13 +14,20 @@ public class Main
         var calendarDisplay = new CalendarDisplay(colHeadings);
 
         var row = new ArrayList<String>();
+        var row2 = new ArrayList<String>();
 
         row.add("1");
         row.add("2");
         row.add("3");
 
+        row2.add("4");
+        row2.add("5");
+        row2.add("6");
+
+
         // Step 3: Display the grid
-        calendarDisplay.addRow("Heading", row);
+        calendarDisplay.addRow("This is row1", row);
+        calendarDisplay.addRow("This is row2", row2);
         calendarDisplay.displayGrid();
     }
 }

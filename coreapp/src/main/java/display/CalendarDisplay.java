@@ -26,6 +26,17 @@ public class CalendarDisplay
      * Adds a heading to the row headings list.
      * @param rowHeading The row heading to add.
      */
+
+    public void addRow(String rowHeading, List<String> rowContent)
+    {
+
+
+        // Adding the row heading
+        addRowHeading(rowHeading);
+        // Adding the row to the table
+        listMessages.add(new ArrayList<>(rowContent));
+    }
+
     private void addRowHeading(String rowHeading)
     {
         rowHeadings.add(rowHeading);
@@ -40,14 +51,6 @@ public class CalendarDisplay
         }
         this.colHeadings = colHeadings;
         this.defaultColLength = colHeadings.size();
-    }
-
-    public void addRow(String rowHeading, List<String> rowContent)
-    {
-
-
-        addRowHeading(rowHeading);
-        listMessages.add(new ArrayList<>(rowContent));
     }
 
     public void displayGrid()
