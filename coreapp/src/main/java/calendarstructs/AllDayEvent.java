@@ -10,4 +10,10 @@ public class AllDayEvent extends CalendarEvent
 
     @Override
     public boolean isAllDayEvent(){return true;}
+
+    @Override
+    public String toString()
+    {
+        return " Date: " + getDate() + " All Day Event \n Event description: " + getEventDescription();
+    }
 }

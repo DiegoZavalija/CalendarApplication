@@ -17,10 +17,6 @@ public class EventManager
         this.dateMap = new HashMap<>();
     }
 
-    public List<CalendarEvent> getEventsByDate(LocalDate date)
-    {
-        return dateMap.getOrDefault(date, new ArrayList<>());
-    }
 
     public void addEvent(CalendarEvent event)
     {
@@ -31,5 +27,11 @@ public class EventManager
 
         // Add the event to the list for the specified date
         eventsForDate.add(event);
+    }
+
+    public List<CalendarEvent> getEventsByDate(LocalDate date)
+    {
+        return dateMap.getOrDefault(date, null);
+
     }
 }

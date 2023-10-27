@@ -28,12 +28,14 @@ public class TimeOfDayEvent extends CalendarEvent
     }
 
     @Override
-    public String getEventDescription() {
-        return super.getEventDescription();
-    }
-
-    @Override
     public boolean isAllDayEvent() {
         return false;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Date: " + getDate() + " Time: " + getEventTime() + "\nDescription: "  + getEventDescription();
+    }
+
 }

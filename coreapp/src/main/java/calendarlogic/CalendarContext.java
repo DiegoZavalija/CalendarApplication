@@ -43,16 +43,17 @@ public class CalendarContext
 
 
         calendarDisplay = new CalendarDisplay(colHeadings);
-        calendarDisplay.addRow("1:00:", row);
+        calendarDisplay.addRow("All Day Events", row);
 
     }
 
 /*    private void createTimeRows()
     {
 
-
+        LocalTime = curTime;
         for(int i=0; i<calendarLength; i++)
         {
+
             List<String> row = new ArrayList<>();
             String time;
             // Fill in the row with increasing hours (24h)
