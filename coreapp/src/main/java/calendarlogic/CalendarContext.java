@@ -9,20 +9,19 @@ import java.util.Locale;
 public class CalendarContext
 {
     private final LocalDate currDate;
-
     private final EventManager eventManager;
     private CalendarDisplay calendarDisplay;
     private int calendarLength;
 
-    public CalendarContext()
+    public CalendarContext(LocalDate currDate)
     {
-        currDate = LocalDate.now();
+        this.currDate = currDate;
         eventManager = new EventManager();
     }
 
 
 
-    public void createDisplay(int dateRange)
+    public void createDisplay(int dateRange, LocalDate startDate)
     {
         List<String> colHeadings = new ArrayList<>();
 
@@ -30,7 +29,7 @@ public class CalendarContext
         // Creating the date column headings
         for(int i=0; i<dateRange; i++)
         {
-            colHeadings.add(currDate.plusDays(i).format(DateTimeFormatter.ofPattern("yyyy/MM/dd")));
+            colHeadings.add(startDate.plusDays(i).format(DateTimeFormatter.ofPattern("yyyy/MM/dd")));
         }
 
         // Setting the length so the rows that are added fit within the columns
