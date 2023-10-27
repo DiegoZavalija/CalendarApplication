@@ -13,11 +13,11 @@ public class CalendarDisplay
 
     int defaultColLength;
 
-    public CalendarDisplay(List<String> colHeadings)
+    public CalendarDisplay()
     {
         this.listMessages = new ArrayList<>();
         this.rowHeadings = new ArrayList<>();
-        setColHeadings(colHeadings);
+        this.colHeadings = new ArrayList<>();
 
         terminalGrid.setBoxChars(new TerminalGrid.BoxChars
                 (
@@ -27,21 +27,8 @@ public class CalendarDisplay
                 "─┬─", "─┴─", "├╌", "╌┤", "╌┼╌"));
     }
 
-    public void addRow(String rowHeading, List<String> rowContent)
-    {
-        // Adding the row heading
-        addRowHeading(rowHeading);
-        // Adding the row to the table
-        listMessages.add(new ArrayList<>(rowContent));
-    }
 
-    private void addRowHeading(String rowHeading)
-    {
-        rowHeadings.add(rowHeading);
-    }
-
-
-    private void setColHeadings(List<String> colHeadings)
+    public void setColHeadings(List<String> colHeadings)
     {
         if (colHeadings.isEmpty())
         {
@@ -49,6 +36,21 @@ public class CalendarDisplay
         }
         this.colHeadings = colHeadings;
         this.defaultColLength = colHeadings.size();
+    }
+
+    public void addColHeading(String colHeading)
+    {
+        // Adding the row heading
+        colHeadings.add(colHeading);
+    }
+
+    public void addRow(String rowHeading, List<String> rowContent)
+    {
+        // Adding the row heading
+        rowHeadings.add(rowHeading);
+
+        // Adding the row to the table
+        listMessages.add(new ArrayList<>(rowContent));
     }
 
     public void displayGrid()

@@ -187,7 +187,7 @@ public class TerminalGrid
         // Handle row/column headings by incorporating them directly into the 2D array. (We later 
         // need to move the grid lines a bit, but otherwise the headings are ordinary table cells.)
         grid = combineGridHeadings(grid, rowHeadings, colHeadings);
-        nRows = grid.length;
+        // nRows = grid.length;
         nColumns = grid[0].length;
         boolean useRowHeadings = rowHeadings != null;
         boolean useColHeadings = colHeadings != null;
@@ -319,10 +319,7 @@ public class TerminalGrid
         
         if(colHeadings != null)
         {
-            for(int colN = colOffset; colN < nCols; colN++)
-            {
-                newGrid[0][colN] = colHeadings[colN - colOffset];
-            }
+            System.arraycopy(colHeadings, colOffset - colOffset, newGrid[0], colOffset, nCols - colOffset);
         }
         
         if(rowHeadings != null && colHeadings != null)

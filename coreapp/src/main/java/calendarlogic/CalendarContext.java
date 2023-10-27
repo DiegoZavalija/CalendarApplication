@@ -4,46 +4,81 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class CalendarContext
 {
-    private final LocalDate currDate;
+    private final LocalDate nowDate;
     private final EventManager eventManager;
+
     private CalendarDisplay calendarDisplay;
-    private int calendarLength;
+    private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
     public CalendarContext(LocalDate currDate)
     {
-        this.currDate = currDate;
+        this.nowDate = currDate;
         eventManager = new EventManager();
     }
 
 
 
-    public void createDisplay(int dateRange, LocalDate startDate)
+/*    public void createDisplay(int dateRange, LocalDate startDate)
     {
-        List<String> colHeadings = new ArrayList<>();
-
+        LocalTime startTime = LocalTime.now();
+        CalendarDisplay calendarDisplay = new CalendarDisplay();
 
         // Creating the date column headings
         for(int i=0; i<dateRange; i++)
         {
-            colHeadings.add(startDate.plusDays(i).format(DateTimeFormatter.ofPattern("yyyy/MM/dd")));
+            LocalDate currDate = startDate.plusDays(i);
+            calendarDisplay.addColHeading(currDate.format(dateTimeFormatter));
+            // SearchEvents
+            for(int j=0; j < dateRange; j++)
+            {
+                List<String> row = new ArrayList<>();
+                LocalTime currTime = startTime.plusHours(j);
+
+                row.add("Event " + i);
+                calendarDisplay.addRow(currTime.toString(), row);
+            }
         }
 
         // Setting the length so the rows that are added fit within the columns
-        calendarLength = colHeadings.size();
-        List<String> row = new ArrayList<>();
-        for (int i=0; i<dateRange; i++)
-        {
-            row.add("Event" + i);
+
+        //calendarDisplay.setColHeadings(colHeadings);
+        calendarDisplay.displayGrid();
+    }*/
+
+    public void createDisplay(int dateRange, LocalDate startDate)
+    {
+
+        List<String> colHeadings = new ArrayList<>();
+        DateTimeFormatter dateFormatter = this.dateTimeFormatter;
+        LocalTime startTime = LocalTime.MIDNIGHT; // Starting from midnight
+        CalendarDisplay calendarDisplay = new CalendarDisplay();
+
+        // Creating the date column headings
+        for(int i=0; i<dateRange; i++) {
+            LocalDate currDate = startDate.plusDays(i);
+            colHeadings.add(currDate.format(dateFormatter));
         }
 
+        calendarDisplay.setColHeadings(colHeadings);
 
-        calendarDisplay = new CalendarDisplay(colHeadings);
-        calendarDisplay.addRow("All Day Events", row);
+        // Creating rows for every hour and every date in the dateRange
+        for(int i=0; i<24; i++)
+        {  // Looping through 24 hours
+            LocalTime currTime = startTime.plusHours(i);
+            List<String> row = new ArrayList<>();
+            for(int j=0; j<dateRange; j++)
+            {
+                // This is where you can add actual event data or placeholders.
+                // For this example, I'm just using a placeholder.
+                row.add("Event " + currTime);
+            }
+            calendarDisplay.addRow(currTime.toString(), row);
+        }
 
+        calendarDisplay.displayGrid();
     }
 
 /*    private void createTimeRows()

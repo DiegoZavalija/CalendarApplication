@@ -11,6 +11,7 @@ import java.util.Map;
 public class EventManager
 {
     private final Map<LocalDate, List<CalendarEvent>> dateMap;
+    // private final List<CalendarEvent> globalEventList = new ArrayList<CalendarEvent>();
 
     public EventManager()
     {
@@ -31,7 +32,6 @@ public class EventManager
 
     public List<CalendarEvent> getEventsByDate(LocalDate date)
     {
-        return dateMap.getOrDefault(date, null);
-
+        return dateMap.getOrDefault(date, new ArrayList<>());
     }
 }
