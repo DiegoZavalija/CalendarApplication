@@ -3,22 +3,25 @@ import java.time.*;
 
 public abstract class CalendarEvent
 {
-    private LocalTime eventTime;
-    private String eventDescription;
+    private final LocalDate eventDate;
+    private final String eventDescription;
 
-    public CalendarEvent(LocalTime eventTime, String eventDescription)
+
+    public CalendarEvent(LocalDate eventDate, String eventDescription)
     {
-        this.eventTime = eventTime;
+        this.eventDate = eventDate;
         this.eventDescription = eventDescription;
     }
 
-    public LocalTime getEventTime()
+    public LocalDate getDate()
     {
-        return eventTime;
+        return eventDate;
     }
 
     public String getEventDescription()
     {
         return eventDescription;
     }
+
+    public abstract boolean isAllDayEvent();
 }

@@ -10,14 +10,14 @@ public class CalendarContext
 {
     private final LocalDate currDate;
 
-    // private final EventManager eventManager;
+    private final EventManager eventManager;
     private CalendarDisplay calendarDisplay;
     private int calendarLength;
 
     public CalendarContext()
     {
         currDate = LocalDate.now();
-
+        eventManager = new EventManager();
     }
 
 
