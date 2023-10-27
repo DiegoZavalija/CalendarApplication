@@ -9,7 +9,6 @@ public class CalendarContext
 {
     private final LocalDate nowDate;
     private final EventManager eventManager;
-
     private CalendarDisplay calendarDisplay;
     private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 
