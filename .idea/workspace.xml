@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Display fo the grid is correct">
-      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/EventManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/CalendarDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/CalendarEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,33 +50,33 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": -1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: -1
+}</component>
   <component name="ProjectId" id="2XIFWIGMdBWVDJtUhureqOg0O1o" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Display",
-    "jdk.selected.JAVA_MODULE": "corretto-19",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Display&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-19&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/library/src/main/java/terminalops" />

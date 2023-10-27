@@ -9,8 +9,9 @@ import java.util.Locale;
 public class CalendarContext
 {
     private final LocalDate currDate;
-    private CalendarDisplay calendarDisplay;
 
+    // private final EventManager eventManager;
+    private CalendarDisplay calendarDisplay;
     private int calendarLength;
 
     public CalendarContext()
