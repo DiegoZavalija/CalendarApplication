@@ -1,33 +1,20 @@
+import calendarlogic.CalendarContext;
 import display.CalendarDisplay;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main
 {
-    public static void main(String[] args) {
-        // Step 1: Create an instance of the CalendarDisplay class with column headings
-        List<String> colHeadings = new ArrayList<>();
-        colHeadings.add("Time");
-        colHeadings.add("Monday");
-        colHeadings.add("Tuesday");
+    public static void main(String[] args)
+    {
+        // Create a calendar context
+        CalendarContext calendarContext = new CalendarContext();
 
-        var calendarDisplay = new CalendarDisplay(colHeadings);
+        // Create the display for a date range of 5 days (including today)
+        calendarContext.createDisplay(5);
 
-        var row = new ArrayList<String>();
-        var row2 = new ArrayList<String>();
+        // Display the calendar
+        calendarContext.displayCalendar();
 
-        row.add("1");
-        row.add("2");
-        row.add("3");
-
-        row2.add("4");
-        row2.add("5");
-        row2.add("6");
-
-
-        // Step 3: Display the grid
-        calendarDisplay.addRow("This is row1", row);
-        calendarDisplay.addRow("This is row2", row2);
-        calendarDisplay.displayGrid();
     }
 }

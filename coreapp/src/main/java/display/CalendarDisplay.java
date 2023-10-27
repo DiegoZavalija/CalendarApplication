@@ -19,18 +19,16 @@ public class CalendarDisplay
         this.rowHeadings = new ArrayList<>();
         setColHeadings(colHeadings);
 
-
+        terminalGrid.setBoxChars(new TerminalGrid.BoxChars
+                (
+                "│ ", " ┊ ", " │",
+                "─", "╌", "─",
+                "╭─", "─╮", "╰─", "─╯",
+                "─┬─", "─┴─", "├╌", "╌┤", "╌┼╌"));
     }
-
-    /**
-     * Adds a heading to the row headings list.
-     * @param rowHeading The row heading to add.
-     */
 
     public void addRow(String rowHeading, List<String> rowContent)
     {
-
-
         // Adding the row heading
         addRowHeading(rowHeading);
         // Adding the row to the table
@@ -47,7 +45,7 @@ public class CalendarDisplay
     {
         if (colHeadings.isEmpty())
         {
-            throw new IllegalArgumentException("Give more than one column");
+            throw new IllegalArgumentException("You have to set more than one column.");
         }
         this.colHeadings = colHeadings;
         this.defaultColLength = colHeadings.size();

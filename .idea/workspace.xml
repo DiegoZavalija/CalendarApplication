@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Added new Event.java">
-      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Display fo the grid is correct">
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698308717130</updated>
-      <workItem from="1698308718128" duration="10348000" />
+      <workItem from="1698308718128" duration="16202000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -124,7 +126,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698310513559</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CalendarDisplay logic">
+      <option name="closed" value="true" />
+      <created>1698328401782</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698328401782</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Display fo the grid is correct">
+      <option name="closed" value="true" />
+      <created>1698364044927</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698364044927</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +153,8 @@
     <MESSAGE value="Gradle changes" />
     <MESSAGE value="Added terminal grid reference to gradle" />
     <MESSAGE value="Added new Event.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new Event.java" />
+    <MESSAGE value="CalendarDisplay logic" />
+    <MESSAGE value="Display fo the grid is correct" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display fo the grid is correct" />
   </component>
 </project>
