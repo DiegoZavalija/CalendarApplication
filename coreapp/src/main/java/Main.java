@@ -38,7 +38,6 @@ public class Main
         calendarContext.addEvent(event1);
         calendarContext.addEvent(event2);
 
-        calendarContext.createDisplay(7, curDate);
         calendarContext.displayCalendar();
 
     }
