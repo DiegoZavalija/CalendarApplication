@@ -2,33 +2,34 @@ import calendarlogic.CalendarContext;
 import calendarstructs.AllDayEvent;
 import calendarstructs.CalendarEvent;
 import calendarstructs.TimeOfDayEvent;
+
+import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Duration;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
 
 
 public class Main
 {
     public static void main(String[] args)
     {
+
         LocalTime curTime = LocalTime.now();
-        LocalDate curDate = LocalDate.now();
-        CalendarContext calendarContext = new CalendarContext(curDate);
+        LocalDate nowDate = LocalDate.now();
+        CalendarContext calendarContext = new CalendarContext(nowDate);
+        Locale locale = Locale.getDefault();
+
+        System.out.println(locale);
 
         Duration duration = Duration.ofHours(2);
         String eventDescription1 = "Meeting 1";
         String eventDescription2 = "Meeting 2";
 
-
-
-        // Create a calendar context
-
-
-        CalendarEvent event1 = new AllDayEvent(curDate, eventDescription1);
-        CalendarEvent event2 = new TimeOfDayEvent(curDate.plusDays(1), eventDescription2, curTime.plusHours(1), duration);
-
-/*        eventManager.addEvent(event1);
-        eventManager.addEvent(event2);*/
+        CalendarEvent event1 = new AllDayEvent(nowDate, eventDescription1);
+        CalendarEvent event2 = new TimeOfDayEvent(nowDate.plusDays(1), eventDescription2, curTime.plusHours(1), duration);
 
         System.out.println(event1);
         System.out.println(event2);
@@ -38,5 +39,16 @@ public class Main
 
         calendarContext.displayCalendar();
 
+        String formattedUS = formatDateForLocale(nowDate, locale);
+        System.out.println(formattedUS);
+
+
+
+    }
+
+    private static String formatDateForLocale(LocalDate date, Locale locale)
+    {
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(locale);
+        return date.format(formatter);
     }
 }

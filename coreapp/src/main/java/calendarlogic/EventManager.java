@@ -7,8 +7,10 @@ import display.CalendarDisplay;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class EventManager
 {
@@ -25,7 +27,7 @@ public class EventManager
         globalCalendarEventList.add(event);
     }
 
-    public void createDisplay(int dateRange, LocalDate startDate, DateTimeFormatter dateFormatter)
+    public void createDisplay(int dateRange, LocalDate startDate, Locale locale)
     {
         CalendarDisplay calendarDisplay = new CalendarDisplay();
         List<String> colHeadings = new ArrayList<>();
@@ -35,7 +37,7 @@ public class EventManager
         // Creating the date column headings
         for(int i=0; i<dateRange; i++) {
             LocalDate currDate = startDate.plusDays(i);
-            colHeadings.add(currDate.format(dateFormatter));
+            colHeadings.add(formatDateForLocale(currDate, locale));
         }
         calendarDisplay.setColHeadings(colHeadings);
 
@@ -84,5 +86,11 @@ public class EventManager
             }
         }
         return null;
+    }
+
+    private static String formatDateForLocale(LocalDate date, Locale locale)
+    {
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(locale);
+        return date.format(formatter);
     }
 }
