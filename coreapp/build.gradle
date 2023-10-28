@@ -16,6 +16,10 @@ dependencies {
     implementation(project(':library'))
 }
 
+run {
+    standardInput = System.in
+}
+
 test {
     useJUnitPlatform()
 }
