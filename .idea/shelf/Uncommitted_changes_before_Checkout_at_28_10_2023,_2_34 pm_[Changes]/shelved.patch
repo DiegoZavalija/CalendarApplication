@@ -1,0 +1,19 @@
+Index: coreapp/src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import calendarlogic.CalendarContext;\nimport calendarstructs.AllDayEvent;\nimport calendarstructs.CalendarEvent;\nimport calendarstructs.TimeOfDayEvent;\n\nimport java.text.DateFormat;\nimport java.time.LocalDate;\nimport java.time.LocalTime;\nimport java.time.Duration;\nimport java.time.format.DateTimeFormatter;\nimport java.time.format.FormatStyle;\nimport java.util.Locale;\n\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n\n        LocalTime curTime = LocalTime.now();\n        LocalDate nowDate = LocalDate.now();\n        CalendarContext calendarContext = new CalendarContext(nowDate);\n        Locale locale = Locale.getDefault();\n\n        System.out.println(locale);\n\n        Duration duration = Duration.ofHours(2);\n        String eventDescription1 = \"Meeting 1\";\n        String eventDescription2 = \"Meeting 2\";\n\n        CalendarEvent event1 = new AllDayEvent(nowDate, eventDescription1);\n        CalendarEvent event2 = new TimeOfDayEvent(nowDate.plusDays(1), eventDescription2, curTime.plusHours(1), duration);\n\n        System.out.println(event1);\n        System.out.println(event2);\n\n        calendarContext.addEvent(event1);\n        calendarContext.addEvent(event2);\n\n        calendarContext.displayCalendar();\n\n        String formattedUS = formatDateForLocale(nowDate, locale);\n        System.out.println(formattedUS);\n\n\n\n    }\n\n    private static String formatDateForLocale(LocalDate date, Locale locale)\n    {\n        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(locale);\n        return date.format(formatter);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/coreapp/src/main/java/Main.java b/coreapp/src/main/java/Main.java
+--- a/coreapp/src/main/java/Main.java	(revision 3ebf0fba32277997d257396df9f3afe72f17d244)
++++ b/coreapp/src/main/java/Main.java	(date 1698474881287)
+@@ -2,8 +2,6 @@
+ import calendarstructs.AllDayEvent;
+ import calendarstructs.CalendarEvent;
+ import calendarstructs.TimeOfDayEvent;
+-
+-import java.text.DateFormat;
+ import java.time.LocalDate;
+ import java.time.LocalTime;
+ import java.time.Duration;
