@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Loop display">
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Showing menu of options">
+      <change beforePath="$PROJECT_DIR$/coreapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,12 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/coreapp">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -81,6 +86,35 @@
       <recent name="$PROJECT_DIR$/library/src/main/java/terminalops" />
       <recent name="$PROJECT_DIR$/library/src/main/java/org" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CalendarApp:coreapp [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/coreapp" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--scan" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CalendarApp:coreapp [run]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -196,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698466650681</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Showing menu of options">
+      <option name="closed" value="true" />
+      <created>1698494649229</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1698494649229</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +269,7 @@
     <MESSAGE value="Find event by date and time method" />
     <MESSAGE value="Separated concerns between context and event manager" />
     <MESSAGE value="Integrated locale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated locale" />
+    <MESSAGE value="Showing menu of options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Showing menu of options" />
   </component>
 </project>
