@@ -42,6 +42,8 @@ public class Main
         String formattedUS = formatDateForLocale(nowDate, locale);
         System.out.println(formattedUS);
 
+        calendarContext.moveDate();
+
 
 
     }
