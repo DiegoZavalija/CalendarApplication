@@ -16,22 +16,27 @@ public class Main
         LocalDate curDate = LocalDate.now();
         CalendarContext calendarContext = new CalendarContext(curDate);
 
-        /*Duration duration = Duration.ofHours(2);
-        String eventDescription = "Meeting 1";
+        Duration duration = Duration.ofHours(2);
+        String eventDescription1 = "Meeting 1";
+        String eventDescription2 = "Meeting 2";
+
+
 
         // Create a calendar context
 
         EventManager eventManager = new EventManager();
 
-        CalendarEvent event1 = new AllDayEvent(curDate, eventDescription);
-        CalendarEvent event2 = new TimeOfDayEvent(curDate, eventDescription, curTime, duration);
+        CalendarEvent event1 = new AllDayEvent(curDate, eventDescription1);
+        CalendarEvent event2 = new TimeOfDayEvent(curDate.plusDays(1), eventDescription2, curTime.plusHours(1), duration);
 
-        eventManager.addEvent(event1);
-        eventManager.addEvent(event2);
+/*        eventManager.addEvent(event1);
+        eventManager.addEvent(event2);*/
 
         System.out.println(event1);
-        System.out.println(event2);*/
+        System.out.println(event2);
 
+        calendarContext.addEvent(event1);
+        calendarContext.addEvent(event2);
 
         calendarContext.createDisplay(7, curDate);
         calendarContext.displayCalendar();
