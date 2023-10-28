@@ -1,22 +1,26 @@
 package calendarlogic;
 import calendarstructs.CalendarEvent;
-import calendarstructs.TimeOfDayEvent;
-import display.CalendarDisplay;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CalendarContext
 {
-    private final LocalDate currDate = LocalDate.now();
+    private LocalDate currDate;
+    private LocalDate nowDate;
     private final EventManager eventManager;
-    private DateTimeFormatter dateTimeFormatter;
+    private final DateTimeFormatter dateTimeFormatter;
 
-    public CalendarContext(LocalDate currDate)
+    public CalendarContext(LocalDate nowDate)
     {
         eventManager = new EventManager();
-        this.dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        this.nowDate = nowDate; // The current date of the user
+        this.currDate = this.nowDate; // The current date of the calendar which the user can move
+        this.dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd"); // Default format
+    }
+
+    public LocalDate getNowDate()
+    {
+        return nowDate;
     }
 
     // Adding event to the Event Manager

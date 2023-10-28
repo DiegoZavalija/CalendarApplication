@@ -38,12 +38,6 @@ public class CalendarDisplay
         this.defaultColLength = colHeadings.size();
     }
 
-    public void addColHeading(String colHeading)
-    {
-        // Adding the row heading
-        colHeadings.add(colHeading);
-    }
-
     public void addRow(String rowHeading, List<String> rowContent)
     {
         // Adding the row heading

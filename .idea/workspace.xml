@@ -7,6 +7,9 @@
     <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Loop display">
       <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/terminalops/TerminalGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/terminalops/TerminalGrid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +174,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698408800253</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Find event by date and time method">
+      <option name="closed" value="true" />
+      <created>1698460208836</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698460208836</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Separated concerns between context and event manager">
+      <option name="closed" value="true" />
+      <created>1698460974503</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698460974503</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +218,8 @@
     <MESSAGE value="More progress into the logic" />
     <MESSAGE value="DateRange for display" />
     <MESSAGE value="Loop display" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loop display" />
+    <MESSAGE value="Find event by date and time method" />
+    <MESSAGE value="Separated concerns between context and event manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated concerns between context and event manager" />
   </component>
 </project>

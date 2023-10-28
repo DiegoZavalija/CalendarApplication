@@ -1,5 +1,4 @@
 import calendarlogic.CalendarContext;
-import calendarlogic.EventManager;
 import calendarstructs.AllDayEvent;
 import calendarstructs.CalendarEvent;
 import calendarstructs.TimeOfDayEvent;
@@ -24,7 +23,6 @@ public class Main
 
         // Create a calendar context
 
-        EventManager eventManager = new EventManager();
 
         CalendarEvent event1 = new AllDayEvent(curDate, eventDescription1);
         CalendarEvent event2 = new TimeOfDayEvent(curDate.plusDays(1), eventDescription2, curTime.plusHours(1), duration);

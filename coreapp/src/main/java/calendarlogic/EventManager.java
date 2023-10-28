@@ -8,20 +8,14 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class EventManager
 {
-    private final Map<LocalDate, List<CalendarEvent>> dateMap;
     private final List<CalendarEvent> globalCalendarEventList;
-
-    private CalendarDisplay calendarDisplay;
 
     public EventManager()
     {
-        this.dateMap = new HashMap<>();
         this.globalCalendarEventList = new ArrayList<>();
     }
 
@@ -31,15 +25,9 @@ public class EventManager
         globalCalendarEventList.add(event);
     }
 
-    public List<CalendarEvent> getEventsByDate(LocalDate date)
-    {
-        return dateMap.getOrDefault(date, new ArrayList<>());
-    }
-
     public void createDisplay(int dateRange, LocalDate startDate, DateTimeFormatter dateFormatter)
     {
         CalendarDisplay calendarDisplay = new CalendarDisplay();
-        var events = this.globalCalendarEventList;
         List<String> colHeadings = new ArrayList<>();
         LocalTime startTime = LocalTime.MIDNIGHT; // Start from midnight
 
@@ -60,7 +48,7 @@ public class EventManager
             for(int j=0; j<dateRange; j++)
             {
                 LocalDate currDate = startDate.plusDays(j);
-                CalendarEvent event = findEventForDateAndTime(events, currDate, currTime);
+                CalendarEvent event = findEventForDateAndTime(this.globalCalendarEventList, currDate, currTime);
 
                 if (event != null)
                 {
@@ -77,20 +65,24 @@ public class EventManager
         calendarDisplay.displayGrid();
     }
 
-    private CalendarEvent findEventForDateAndTime(List<CalendarEvent> events, LocalDate date, LocalTime time) {
-        for (CalendarEvent event : events) {
-            if (event.isAllDayEvent() && event.getDate().equals(date)) {
+    private CalendarEvent findEventForDateAndTime(List<CalendarEvent> events, LocalDate date, LocalTime time)
+    {
+        for (CalendarEvent event : events)
+        {
+            if (event.isAllDayEvent() && event.getDate().equals(date))
+            {
                 return event;
-            } else if (!event.isAllDayEvent() && event instanceof TimeOfDayEvent timedEvent) {
+            }
+            else if (!event.isAllDayEvent() && event instanceof TimeOfDayEvent timedEvent)
+            {
                 if (timedEvent.getDate().equals(date) &&
                         !timedEvent.getEventTime().isAfter(time) &&
-                        timedEvent.getEventTime().plus(timedEvent.getEventDuration()).isAfter(time)) {
+                        timedEvent.getEventTime().plus(timedEvent.getEventDuration()).isAfter(time))
+                {
                     return timedEvent;
                 }
             }
         }
         return null;
     }
-
-
 }

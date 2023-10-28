@@ -3,7 +3,7 @@ package terminalops;
 import org.fusesource.jansi.*;
 import org.apache.commons.text.WordUtils;
 import java.io.*;
-import java.nio.charset.*;
+// import java.nio.charset.*;
 import java.util.*;
 import java.util.function.Consumer;
 
@@ -46,12 +46,11 @@ public class TerminalGrid
         /*MID_TOP:*/ "─┬─", /*MID_BOTTOM:*/ "─┴─",
         /*MID_LEFT:*/ "├─", /*MID_RIGHT:*/ "─┤",
         /*MID:*/ "─┼─");
-    public static final BoxChars ASCII_BOX_CHARS = new BoxChars(
-        "| ", " | ", " |", "-", "-", "-", "/-", "-\\", "\\-", "-/", "-+-", "-+-", "+-", "-+", "-+-");
-        
-    private final PrintStream baseOut;
-    private PrintStream out;
-    private int terminalWidth;
+/*    public static final BoxChars ASCII_BOX_CHARS = new BoxChars(
+        "| ", " | ", " |", "-", "-", "-", "/-", "-\\", "\\-", "-/", "-+-", "-+-", "+-", "-+", "-+-");*/
+
+    private final PrintStream out;
+    private final int terminalWidth;
     private BoxChars boxChars = UNICODE_BOX_CHARS;
     
     public static TerminalGrid create()
@@ -68,32 +67,31 @@ public class TerminalGrid
     
     public TerminalGrid(PrintStream out, int terminalWidth)
     {
-        this.baseOut = out;
         this.out = out;
         this.terminalWidth = terminalWidth;
     }
     
-    /**
+    /*
      * Sets the terminal width explicitly, rather than using any automatically pre-determined 
      * value. The terminal width is the maximum width that 
-     *
+
      * Note: auto-detection may not work when running inside Gradle (i.e., "./gradlew run"), 
      * because in this environment we don't directly have access to the terminal. If the 
      */
-    public void setTerminalWidth(int terminalWidth)
+/*    public void setTerminalWidth(int terminalWidth)
     {
         this.terminalWidth = terminalWidth;
-    }
+    }*/
     
     /**
      * Chooses how to draw the table lines. TerminalGrid has two pre-defined constants that will
      * work here:
-     *
+
      * (1) UNICODE_BOX_CHARS produces nice, joining lines (depending on the font), but may not work
      *     on all systems due to encoding issues.
-     *
+
      * (2) ASCII_BOX_CHARS produces lines that are a bit uglier, but are virtually certain to work.
-     *
+
      * You can also create and pass in your own instance of BoxChars.
      */
     public void setBoxChars(BoxChars boxChars)
@@ -101,30 +99,30 @@ public class TerminalGrid
         this.boxChars = boxChars;
     }
     
-    /**
+    /*
      * Sets the character encoding used to print the grid. By default, the system default is used.
-     *
+
      * This may determine whether box-drawing characters are displayed properly. The basic ASCII 
      * characters will probably work on virtually any Charset, but proper Unicode box-drawing 
      * characters will tend to require UTF-8.
-     *
+
      * Example:
-     * 
+
      * terminalGrid.setCharset(java.nio.charset.Charset.forName("UTF-8"));
      */
-    public void setCharset(Charset charset)
+/*    public void setCharset(Charset charset)
     {
         this.out = new PrintStream(baseOut, true, charset);
-    }
+    }*/
 
-    /**
+    /*
      * Convenience method for printing a grid consisting of nested lists, instead of a 2D array, 
      * without any headings.
      */
-    public void print(List<List<String>> listGrid)
+/*    public void print(List<List<String>> listGrid)
     {
         print(toArrayGrid(listGrid), null, null);
-    }
+    }*/
     
     /**
      * Convenience method for printing a grid consisting of nested lists, instead of a 2D array, 
@@ -142,13 +140,13 @@ public class TerminalGrid
         return listGrid.stream().map(row -> row.toArray(String[]::new)).toArray(String[][]::new);
     }
     
-    /**
+    /*
      * Convenience method for printing a grid (as a 2D array) without any headings.
      */
-    public void print(String[][] grid)
+/*    public void print(String[][] grid)
     {
         print(grid, null, null);
-    }
+    }*/
     
     /**
      * Prints a grid of strings (as a 2D array), along with row and column headings.
@@ -319,7 +317,7 @@ public class TerminalGrid
         
         if(colHeadings != null)
         {
-            System.arraycopy(colHeadings, colOffset - colOffset, newGrid[0], colOffset, nCols - colOffset);
+            System.arraycopy(colHeadings, 0, newGrid[0], colOffset, nCols - colOffset);
         }
         
         if(rowHeadings != null && colHeadings != null)
