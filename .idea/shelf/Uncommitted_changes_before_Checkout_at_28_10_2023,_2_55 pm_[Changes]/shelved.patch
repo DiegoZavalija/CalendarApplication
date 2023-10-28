@@ -1,0 +1,41 @@
+Index: coreapp/src/main/java/calendarlogic/CalendarContext.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package calendarlogic;\nimport calendarstructs.CalendarEvent;\nimport java.time.*;\nimport java.time.format.DateTimeFormatter;\nimport java.util.Locale;\nimport java.util.Objects;\nimport java.util.Scanner;\n\npublic class CalendarContext\n{\n    private LocalDate currDate;\n    private final LocalDate nowDate;\n    private Locale curLocale;\n    private final EventManager eventManager;\n    private final DateTimeFormatter dateTimeFormatter;\n\n    public CalendarContext(LocalDate nowDate)\n    {\n        eventManager = new EventManager();\n\n        this.nowDate = nowDate; // The current date of the user\n        this.currDate = this.nowDate; // The current date of the calendar which the user can move\n        this.curLocale = Locale.getDefault(); // Setting the default locale\n\n        this.dateTimeFormatter = DateTimeFormatter.ofPattern(\"yyyy/MM/dd\"); // Default format\n    }\n\n    public LocalDate getNowDate()\n    {\n        return nowDate;\n    }\n\n    // Adding event to the Event Manager\n    public void addEvent(CalendarEvent event)\n    {\n        eventManager.addEvent(event);\n    }\n\n    public void moveDate()\n    {\n        Scanner sc = new Scanner(System.in);\n        String input = sc.nextLine();\n\n        switch (input)\n        {\n            case \"+d\" -> currDate = currDate.plusDays(1);\n            case \"+w\" -> currDate = currDate.plusWeeks(1);\n            case \"+m\" -> currDate = currDate.plusMonths(1);\n            case \"+y\" -> currDate = currDate.plusYears(1);\n            case \"-d\" -> currDate = currDate.minusDays(1);\n            case \"-w\" -> currDate = currDate.minusWeeks(1);\n            case \"-m\" -> currDate = currDate.minusMonths(1);\n            case \"-y\" -> currDate = currDate.minusYears(1);\n            case \"t\" -> currDate = nowDate;\n            default -> {\n                System.out.println(\"Invalid option.\");\n                return;\n            }\n        }\n\n        displayCalendar();\n    }\n\n    public void displayCalendar()\n    {\n        // Adding all dependencies from the context\n        eventManager.createDisplay(7, currDate, curLocale);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/coreapp/src/main/java/calendarlogic/CalendarContext.java b/coreapp/src/main/java/calendarlogic/CalendarContext.java
+--- a/coreapp/src/main/java/calendarlogic/CalendarContext.java	(revision cb23a64a34f6204e39719a3889db2ba089f7a5a4)
++++ b/coreapp/src/main/java/calendarlogic/CalendarContext.java	(date 1698476018980)
+@@ -25,11 +25,6 @@
+         this.dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd"); // Default format
+     }
+ 
+-    public LocalDate getNowDate()
+-    {
+-        return nowDate;
+-    }
+-
+     // Adding event to the Event Manager
+     public void addEvent(CalendarEvent event)
+     {
+Index: coreapp/src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import calendarlogic.CalendarContext;\nimport calendarstructs.AllDayEvent;\nimport calendarstructs.CalendarEvent;\nimport calendarstructs.TimeOfDayEvent;\n\nimport java.text.DateFormat;\nimport java.time.LocalDate;\nimport java.time.LocalTime;\nimport java.time.Duration;\nimport java.time.format.DateTimeFormatter;\nimport java.time.format.FormatStyle;\nimport java.util.Locale;\n\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n\n        LocalTime curTime = LocalTime.now();\n        LocalDate nowDate = LocalDate.now();\n        CalendarContext calendarContext = new CalendarContext(nowDate);\n        Locale locale = Locale.getDefault();\n\n        System.out.println(locale);\n\n        Duration duration = Duration.ofHours(2);\n        String eventDescription1 = \"Meeting 1\";\n        String eventDescription2 = \"Meeting 2\";\n\n        CalendarEvent event1 = new AllDayEvent(nowDate, eventDescription1);\n        CalendarEvent event2 = new TimeOfDayEvent(nowDate.plusDays(1), eventDescription2, curTime.plusHours(1), duration);\n\n        System.out.println(event1);\n        System.out.println(event2);\n\n        calendarContext.addEvent(event1);\n        calendarContext.addEvent(event2);\n\n        calendarContext.displayCalendar();\n\n        String formattedUS = formatDateForLocale(nowDate, locale);\n        System.out.println(formattedUS);\n\n        calendarContext.moveDate();\n\n\n\n    }\n\n    private static String formatDateForLocale(LocalDate date, Locale locale)\n    {\n        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(locale);\n        return date.format(formatter);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/coreapp/src/main/java/Main.java b/coreapp/src/main/java/Main.java
+--- a/coreapp/src/main/java/Main.java	(revision cb23a64a34f6204e39719a3889db2ba089f7a5a4)
++++ b/coreapp/src/main/java/Main.java	(date 1698476018983)
+@@ -2,8 +2,6 @@
+ import calendarstructs.AllDayEvent;
+ import calendarstructs.CalendarEvent;
+ import calendarstructs.TimeOfDayEvent;
+-
+-import java.text.DateFormat;
+ import java.time.LocalDate;
+ import java.time.LocalTime;
+ import java.time.Duration;

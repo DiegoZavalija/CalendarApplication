@@ -2,13 +2,9 @@ import calendarlogic.CalendarContext;
 import calendarstructs.AllDayEvent;
 import calendarstructs.CalendarEvent;
 import calendarstructs.TimeOfDayEvent;
-
-import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Duration;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 import java.util.Locale;
 
 
@@ -37,20 +33,7 @@ public class Main
         calendarContext.addEvent(event1);
         calendarContext.addEvent(event2);
 
-        calendarContext.displayCalendar();
 
-        String formattedUS = formatDateForLocale(nowDate, locale);
-        System.out.println(formattedUS);
-
-        calendarContext.moveDate();
-
-
-
-    }
-
-    private static String formatDateForLocale(LocalDate date, Locale locale)
-    {
-        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(locale);
-        return date.format(formatter);
+        calendarContext.startCalendar();
     }
 }
