@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class CalendarContext
 {
-    private LocalDate currDate;
-    private final LocalDate nowDate;
-    private final Locale curLocale;
+    private LocalDate currDate; // The calendar's current date
+    private final LocalDate nowDate; // The ACTUAL current date of the user
+    private Locale curLocale;
     private final EventManager eventManager;
 
     public CalendarContext(LocalDate nowDate)
@@ -30,13 +30,17 @@ public class CalendarContext
     public void searchForEvent(Scanner sc)
     {
 
-        try
+
+        System.out.println("Enter the title of the event: ");
+        String searchInput = sc.nextLine();
+        String trimmedInput = searchInput.trim();
+        CalendarEvent event = eventManager.searchEvent(trimmedInput);
+        if (event != null)
         {
-            System.out.println("Enter the title of the event: ");
-            String searchInput = sc.nextLine();
-            CalendarEvent event = eventManager.searchEvent(searchInput);
             currDate = event.getDate();
-        } catch (NullPointerException ex)
+            System.out.println("Event found: " + event);
+        }
+        else
         {
             System.out.println("No event found matching the search term.");
         }
@@ -67,6 +71,11 @@ public class CalendarContext
                     case "-y" -> currDate = currDate.minusYears(1);
                     case "t" -> currDate = nowDate;
                     case "s" -> searchForEvent(sc);
+                    case "l" -> {
+                        System.out.println("Enter the IETF language tag (e.g., 'en-AU', 'th-TH-u-nu-thai'): ");
+                        String langTag = sc.nextLine();
+                        changeLocale(langTag);
+                    }
                     case "x" -> continueMove = false;
                     default -> System.out.println("Invalid option.");
 
@@ -76,8 +85,7 @@ public class CalendarContext
         }
     }
 
-
-    public static void showOptions()
+    public static void showOptions() // Simply prints the menu
     {
         System.out.println("""
                 Press the following keys to modify the date:
@@ -91,8 +99,23 @@ public class CalendarContext
                 '-y' To move backwards one year
                 't' To return to today
                 's' To search for an event title
+                'l' To change the locale
                 'x' To exit
                 """);
+    }
+
+    public void changeLocale(String languageTag)
+    {
+        try
+        {
+            Locale newLocale = Locale.forLanguageTag(languageTag);
+            curLocale = newLocale;
+            System.out.println("Locale has been changed to: " + newLocale.getDisplayName());
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println("Failed to change the locale. Please enter a valid IETF language tag.");
+        }
     }
 
     public void displayCalendar()
