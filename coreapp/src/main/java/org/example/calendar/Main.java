@@ -34,6 +34,8 @@ public class Main
 
         calendarContext.addEvent(event1);
         calendarContext.addEvent(event2);
+        calendarContext.addEvent(LocalDate.parse(nowDate.plusDays(4).toString()), "Meeting 3", "10:30", "2");
+        calendarContext.addEvent(LocalDate.parse(nowDate.plusDays(5).toString()), "Meeting 4", "", "");
 
 
         calendarContext.startCalendar();

@@ -1,5 +1,8 @@
 package org.example.calendar.calendarlogic;
+import org.example.calendar.calendarstructs.AllDayEvent;
 import org.example.calendar.calendarstructs.CalendarEvent;
+import org.example.calendar.calendarstructs.TimeOfDayEvent;
+
 import java.time.*;
 import java.util.Locale;
 import java.util.Scanner;
@@ -24,6 +27,24 @@ public class CalendarContext
     // Adding event to the Event Manager
     public void addEvent(CalendarEvent event)
     {
+        // Create new event with normalized input
+        eventManager.addEvent(event);
+    }
+
+    public void addEvent(LocalDate date, String eventTitle, String startTime, String durationStr)
+    {
+        CalendarEvent event;
+
+        if (startTime.isEmpty() || durationStr.isEmpty()) {
+            event = new AllDayEvent(date, eventTitle);
+        }
+        else
+        {
+            LocalTime start = LocalTime.parse(startTime);
+            Duration duration = Duration.ofHours(Long.parseLong(durationStr));
+            event = new TimeOfDayEvent(date, eventTitle, start, duration);
+        }
+        System.out.println(event);
         eventManager.addEvent(event);
     }
 
