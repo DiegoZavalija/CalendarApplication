@@ -3,6 +3,7 @@ import org.example.calendar.calendarstructs.AllDayEvent;
 import org.example.calendar.calendarstructs.CalendarEvent;
 import org.example.calendar.calendarstructs.TimeOfDayEvent;
 
+import java.text.Normalizer;
 import java.time.*;
 import java.util.Locale;
 import java.util.Scanner;
@@ -31,14 +32,17 @@ public class CalendarContext
         eventManager.addEvent(event);
     }
 
-    public void addEvent(LocalDate date, String eventTitle, String startTime, String durationStr)
+    public void addEvent(LocalDate date, String title, String startTime, String durationStr)
     {
         CalendarEvent event;
 
-        if (startTime.isEmpty() || durationStr.isEmpty()) {
+        String eventTitle = Normalizer.normalize(title, Normalizer.Form.NFC); // Normalizing event title
+
+        if (startTime.isEmpty() || durationStr.isEmpty()) // Default all day
+        {
             event = new AllDayEvent(date, eventTitle);
         }
-        else
+        else // If user provides both start time and duration, the event is TimeOfDay
         {
             LocalTime start = LocalTime.parse(startTime);
             Duration duration = Duration.ofHours(Long.parseLong(durationStr));
@@ -54,7 +58,7 @@ public class CalendarContext
 
         System.out.println("Enter the title of the event: ");
         String searchInput = sc.nextLine();
-        String trimmedInput = searchInput.trim();
+        String trimmedInput = Normalizer.normalize(searchInput.trim(), Normalizer.Form.NFC);
         CalendarEvent event = eventManager.searchEvent(trimmedInput);
         if (event != null)
         {
@@ -127,15 +131,17 @@ public class CalendarContext
 
     public void changeLocale(String languageTag)
     {
-        try
+        languageTag = Normalizer.normalize(languageTag, Normalizer.Form.NFC);
+        Locale newLocale = Locale.forLanguageTag(languageTag);
+
+        if (!newLocale.getLanguage().isEmpty())
         {
-            Locale newLocale = Locale.forLanguageTag(languageTag);
             curLocale = newLocale;
             System.out.println("Locale has been changed to: " + newLocale.getDisplayName());
         }
-        catch (NullPointerException e)
+        else
         {
-            System.out.println("Failed to change the locale. Please enter a valid IETF language tag.");
+            System.out.println("Invalid locale.");
         }
     }
 
