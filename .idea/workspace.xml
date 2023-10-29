@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Gradle run system.in">
-      <change afterPath="$PROJECT_DIR$/coreapp/saed-pmd-rules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Added pmd ruleset file to coreapp">
       <change beforePath="$PROJECT_DIR$/coreapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/CalendarContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/CalendarContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarlogic/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/AllDayEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarstructs/AllDayEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/CalendarEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarstructs/CalendarEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/calendarstructs/TimeOfDayEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarstructs/TimeOfDayEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/display/CalendarDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/display/CalendarDisplay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +98,7 @@
   </component>
   <component name="RunManager" selected="Gradle.CalendarApp:coreapp [run]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="org.example.corecalendar.calendarlogic.Main" />
       <module name="CalendarApp.coreapp.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -252,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698494649229</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added pmd ruleset file to coreapp">
+      <option name="closed" value="true" />
+      <created>1698552215406</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698552215406</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +296,7 @@
     <MESSAGE value="Separated concerns between context and event manager" />
     <MESSAGE value="Integrated locale" />
     <MESSAGE value="Showing menu of options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Showing menu of options" />
+    <MESSAGE value="Added pmd ruleset file to coreapp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pmd ruleset file to coreapp" />
   </component>
 </project>

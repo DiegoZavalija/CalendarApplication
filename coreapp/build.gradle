@@ -26,7 +26,7 @@ test {
 }
 
 application {
-    mainClass = 'Main'
+    mainClass = 'org.example.calendar.Main'
 }
 
 pmd {

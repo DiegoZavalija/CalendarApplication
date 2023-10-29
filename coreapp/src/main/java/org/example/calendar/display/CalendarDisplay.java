@@ -1,4 +1,4 @@
-package display;
+package org.example.calendar.display;
 import terminalops.TerminalGrid;
 
 import java.util.ArrayList;

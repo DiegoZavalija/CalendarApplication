@@ -1,5 +1,5 @@
-package calendarlogic;
-import calendarstructs.CalendarEvent;
+package org.example.calendar.calendarlogic;
+import org.example.calendar.calendarstructs.CalendarEvent;
 import java.time.*;
 import java.util.Locale;
 import java.util.Scanner;
@@ -56,10 +56,6 @@ public class CalendarContext
         }
     }
 
-    public void changeLocale(String localeString)
-    {
-
-    }
 
     public static void showOptions()
     {

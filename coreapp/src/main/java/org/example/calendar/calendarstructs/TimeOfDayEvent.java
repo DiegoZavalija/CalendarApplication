@@ -1,4 +1,4 @@
-package calendarstructs;
+package org.example.calendar.calendarstructs;
 
 import java.time.Duration;
 import java.time.LocalDate;

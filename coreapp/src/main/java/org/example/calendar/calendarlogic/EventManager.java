@@ -1,8 +1,8 @@
-package calendarlogic;
+package org.example.calendar.calendarlogic;
 
-import calendarstructs.CalendarEvent;
-import calendarstructs.TimeOfDayEvent;
-import display.CalendarDisplay;
+import org.example.calendar.calendarstructs.CalendarEvent;
+import org.example.calendar.calendarstructs.TimeOfDayEvent;
+import org.example.calendar.display.CalendarDisplay;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
