@@ -15,10 +15,12 @@ import java.util.Locale;
 public class EventManager
 {
     private final List<CalendarEvent> globalCalendarEventList;
+    private LocalDate currentDate;
 
-    public EventManager()
+    public EventManager(LocalDate currentDate)
     {
         this.globalCalendarEventList = new ArrayList<>();
+        this.currentDate = currentDate;
     }
 
 
@@ -50,11 +52,11 @@ public class EventManager
             for(int j=0; j<dateRange; j++)
             {
                 LocalDate currDate = startDate.plusDays(j);
-                CalendarEvent event = findEventForDateAndTime(this.globalCalendarEventList, currDate, currTime);
+                CalendarEvent event = findEventForDateAndTime(currDate, currTime);
 
                 if (event != null)
                 {
-                    row.add(event.getEventDescription());
+                    row.add(event.getEventTitle());
                 }
                 else
                 {
@@ -67,9 +69,9 @@ public class EventManager
         calendarDisplay.displayGrid();
     }
 
-    private CalendarEvent findEventForDateAndTime(List<CalendarEvent> events, LocalDate date, LocalTime time)
+    public CalendarEvent findEventForDateAndTime(LocalDate date, LocalTime time)
     {
-        for (CalendarEvent event : events)
+        for (CalendarEvent event : this.globalCalendarEventList)
         {
             if (event.isAllDayEvent() && event.getDate().equals(date))
             {
@@ -92,5 +94,25 @@ public class EventManager
     {
         DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(locale);
         return date.format(formatter);
+    }
+
+    public CalendarEvent searchEvent(String searchTerm)
+    {
+        LocalDate endDate = currentDate.plusYears(1); // One year beyond the current date.
+
+        for (LocalDate date = currentDate; !date.isAfter(endDate); date = date.plusDays(1)) {
+            for (CalendarEvent event : globalCalendarEventList) {
+                if (event.getDate().equals(date) && event.getEventTitle().contains(searchTerm)) {
+                    // Output the matching event details
+                    System.out.println(event);
+
+                    // Shift the current date to the date of the found event
+                    currentDate = event.getDate();
+                    return event; // Exit the method after finding the first match
+                }
+            }
+        }
+        // If no event matches the search term
+        return null;
     }
 }

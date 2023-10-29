@@ -13,17 +13,34 @@ public class CalendarContext
 
     public CalendarContext(LocalDate nowDate)
     {
-        eventManager = new EventManager();
+
 
         this.nowDate = nowDate; // The current date of the user
         this.currDate = this.nowDate; // The current date of the calendar which the user can move
         this.curLocale = Locale.getDefault(); // Setting the default locale
+        eventManager = new EventManager(this.nowDate);
     }
 
     // Adding event to the Event Manager
     public void addEvent(CalendarEvent event)
     {
         eventManager.addEvent(event);
+    }
+
+    public void searchForEvent(Scanner sc)
+    {
+
+        try
+        {
+            System.out.println("Enter the title of the event: ");
+            String searchInput = sc.nextLine();
+            CalendarEvent event = eventManager.searchEvent(searchInput);
+            currDate = event.getDate();
+        } catch (NullPointerException ex)
+        {
+            System.out.println("No event found matching the search term.");
+        }
+
     }
 
     public void startCalendar()
@@ -49,6 +66,7 @@ public class CalendarContext
                     case "-m" -> currDate = currDate.minusMonths(1);
                     case "-y" -> currDate = currDate.minusYears(1);
                     case "t" -> currDate = nowDate;
+                    case "s" -> searchForEvent(sc);
                     case "x" -> continueMove = false;
                     default -> System.out.println("Invalid option.");
 
@@ -72,6 +90,8 @@ public class CalendarContext
                 '-m' To move backwards one month
                 '-y' To move backwards one year
                 't' To return to today
+                's' To search for an event title
+                'x' To exit
                 """);
     }
 

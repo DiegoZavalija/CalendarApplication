@@ -3,9 +3,9 @@ import java.time.LocalDate;
 
 public class AllDayEvent extends CalendarEvent
 {
-    public AllDayEvent(LocalDate eventDate, String eventDescription)
+    public AllDayEvent(LocalDate eventDate, String eventTitle)
     {
-        super(eventDate, eventDescription);
+        super(eventDate, eventTitle);
     }
 
     @Override
@@ -14,6 +14,6 @@ public class AllDayEvent extends CalendarEvent
     @Override
     public String toString()
     {
-        return " Date: " + getDate() + " All Day Event \n Event description: " + getEventDescription();
+        return " Date: " + getDate() + " All Day Event \n Event description: " + getEventTitle();
     }
 }

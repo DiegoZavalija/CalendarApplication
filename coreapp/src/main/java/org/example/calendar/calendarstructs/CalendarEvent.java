@@ -4,13 +4,13 @@ import java.time.*;
 public abstract class CalendarEvent
 {
     private final LocalDate eventDate;
-    private final String eventDescription;
+    private final String eventTitle;
 
 
-    public CalendarEvent(LocalDate eventDate, String eventDescription)
+    public CalendarEvent(LocalDate eventDate, String eventTitle)
     {
         this.eventDate = eventDate;
-        this.eventDescription = eventDescription;
+        this.eventTitle = eventTitle;
     }
 
     public LocalDate getDate()
@@ -18,9 +18,9 @@ public abstract class CalendarEvent
         return eventDate;
     }
 
-    public String getEventDescription()
+    public String getEventTitle()
     {
-        return eventDescription;
+        return eventTitle;
     }
 
     public abstract boolean isAllDayEvent();

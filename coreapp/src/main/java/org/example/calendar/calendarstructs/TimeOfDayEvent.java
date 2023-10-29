@@ -10,9 +10,9 @@ public class TimeOfDayEvent extends CalendarEvent
     private final Duration eventDuration;
 
 
-    public TimeOfDayEvent(LocalDate eventDate, String eventDescription, LocalTime eventTime, Duration eventDuration)
+    public TimeOfDayEvent(LocalDate eventDate, String eventTitle, LocalTime eventTime, Duration eventDuration)
     {
-        super(eventDate, eventDescription);
+        super(eventDate, eventTitle);
         this.eventTime = eventTime;
         this.eventDuration = eventDuration;
     }
@@ -35,7 +35,7 @@ public class TimeOfDayEvent extends CalendarEvent
     @Override
     public String toString()
     {
-        return "Date: " + getDate() + " Time: " + getEventTime() + "\nDescription: "  + getEventDescription();
+        return "Date: " + getDate() + " Time: " + getEventTime() + "\nDescription: "  + getEventTitle();
     }
 
 }
