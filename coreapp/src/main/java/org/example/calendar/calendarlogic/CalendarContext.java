@@ -28,31 +28,33 @@ public class CalendarContext
 
     public void startCalendar()
     {
-        Scanner sc = new Scanner(System.in);
-        boolean continueMove = true;
-        displayCalendar();
-
-        while(continueMove)
+        try(Scanner sc = new Scanner(System.in))
         {
-            showOptions();
-            String input = sc.nextLine();
-
-            switch (input)
-            {
-                case "+d" -> currDate = currDate.plusDays(1);
-                case "+w" -> currDate = currDate.plusWeeks(1);
-                case "+m" -> currDate = currDate.plusMonths(1);
-                case "+y" -> currDate = currDate.plusYears(1);
-                case "-d" -> currDate = currDate.minusDays(1);
-                case "-w" -> currDate = currDate.minusWeeks(1);
-                case "-m" -> currDate = currDate.minusMonths(1);
-                case "-y" -> currDate = currDate.minusYears(1);
-                case "t" -> currDate = nowDate;
-                case "x" -> continueMove = false;
-                default -> System.out.println("Invalid option.");
-
-            }
+            boolean continueMove = true;
             displayCalendar();
+
+            while(continueMove)
+            {
+                showOptions();
+                String input = sc.nextLine();
+
+                switch (input)
+                {
+                    case "+d" -> currDate = currDate.plusDays(1);
+                    case "+w" -> currDate = currDate.plusWeeks(1);
+                    case "+m" -> currDate = currDate.plusMonths(1);
+                    case "+y" -> currDate = currDate.plusYears(1);
+                    case "-d" -> currDate = currDate.minusDays(1);
+                    case "-w" -> currDate = currDate.minusWeeks(1);
+                    case "-m" -> currDate = currDate.minusMonths(1);
+                    case "-y" -> currDate = currDate.minusYears(1);
+                    case "t" -> currDate = nowDate;
+                    case "x" -> continueMove = false;
+                    default -> System.out.println("Invalid option.");
+
+                }
+                displayCalendar();
+            }
         }
     }
 

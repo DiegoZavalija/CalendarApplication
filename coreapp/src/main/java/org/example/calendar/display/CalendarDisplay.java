@@ -11,7 +11,7 @@ public class CalendarDisplay
     private final List<String> rowHeadings;
     private List<String> colHeadings;
 
-    int defaultColLength;
+    /* default */ int defaultColLength;
 
     public CalendarDisplay()
     {
