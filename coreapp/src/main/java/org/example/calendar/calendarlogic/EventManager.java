@@ -15,7 +15,7 @@ import java.util.Locale;
 public class EventManager
 {
     private final List<CalendarEvent> globalCalendarEventList;
-    private LocalDate currentDate;
+    private final LocalDate currentDate;
 
     public EventManager(LocalDate currentDate)
     {
@@ -100,14 +100,13 @@ public class EventManager
     {
         LocalDate endDate = currentDate.plusYears(1); // One year beyond the current date.
 
-        for (LocalDate date = currentDate; !date.isAfter(endDate); date = date.plusDays(1)) {
+        for (LocalDate date = currentDate; !date.isAfter(endDate); date = date.plusDays(1))
+        {
             for (CalendarEvent event : globalCalendarEventList) {
-                if (event.getDate().equals(date) && event.getEventTitle().contains(searchTerm)) {
+                if (event.getDate().equals(date) && event.getEventTitle().contains(searchTerm))
+                {
                     // Output the matching event details
                     System.out.println(event);
-
-                    // Shift the current date to the date of the found event
-                    currentDate = event.getDate();
                     return event; // Exit the method after finding the first match
                 }
             }

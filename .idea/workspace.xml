@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Search function implemented">
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/CalendarContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/CalendarContext.java" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Fixed PMD violation for the change locale method">
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/EventManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +275,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698560990531</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add event by string function">
+      <option name="closed" value="true" />
+      <created>1698571900381</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1698571900381</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixed change locale method">
+      <option name="closed" value="true" />
+      <created>1698572642954</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1698572642954</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fixed PMD violation for the change locale method">
+      <option name="closed" value="true" />
+      <created>1698572941065</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1698572941065</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +334,9 @@
     <MESSAGE value="Added pmd ruleset file to coreapp" />
     <MESSAGE value="Restructured coreapp into a package" />
     <MESSAGE value="Search function implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search function implemented" />
+    <MESSAGE value="Add event by string function" />
+    <MESSAGE value="Fixed change locale method" />
+    <MESSAGE value="Fixed PMD violation for the change locale method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed PMD violation for the change locale method" />
   </component>
 </project>
