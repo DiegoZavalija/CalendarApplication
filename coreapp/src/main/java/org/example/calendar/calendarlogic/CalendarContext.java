@@ -134,14 +134,14 @@ public class CalendarContext
         languageTag = Normalizer.normalize(languageTag, Normalizer.Form.NFC);
         Locale newLocale = Locale.forLanguageTag(languageTag);
 
-        if (!newLocale.getLanguage().isEmpty())
+        if (newLocale.getLanguage().isEmpty())
         {
-            curLocale = newLocale;
-            System.out.println("Locale has been changed to: " + newLocale.getDisplayName());
+            System.out.println("Invalid locale.");
         }
         else
         {
-            System.out.println("Invalid locale.");
+            curLocale = newLocale;
+            System.out.println("Locale has been changed to: " + newLocale.getDisplayName());
         }
     }
 
