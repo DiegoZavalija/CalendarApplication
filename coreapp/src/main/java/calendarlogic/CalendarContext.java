@@ -1,18 +1,15 @@
 package calendarlogic;
 import calendarstructs.CalendarEvent;
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class CalendarContext
 {
     private LocalDate currDate;
     private final LocalDate nowDate;
-    private Locale curLocale;
+    private final Locale curLocale;
     private final EventManager eventManager;
-    private final DateTimeFormatter dateTimeFormatter;
 
     public CalendarContext(LocalDate nowDate)
     {
@@ -21,8 +18,6 @@ public class CalendarContext
         this.nowDate = nowDate; // The current date of the user
         this.currDate = this.nowDate; // The current date of the calendar which the user can move
         this.curLocale = Locale.getDefault(); // Setting the default locale
-
-        this.dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd"); // Default format
     }
 
     // Adding event to the Event Manager
@@ -63,8 +58,7 @@ public class CalendarContext
 
     public void changeLocale(String localeString)
     {
-        // Here the user can change the locale of the CalendarContext by inputting text
-        // try( Locale.builder) catch (bad locale)
+
     }
 
     public static void showOptions()

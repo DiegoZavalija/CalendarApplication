@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'pmd'
 }
 
 group = 'org.example'
@@ -26,4 +27,12 @@ test {
 
 application {
     mainClass = 'Main'
+}
+
+pmd {
+    consoleOutput = true
+    toolVersion = '6.55.0'
+    rulesMinimumPriority = 5
+    ruleSets = []
+    ruleSetFiles = files('saed-pmd-rules.xml')
 }
