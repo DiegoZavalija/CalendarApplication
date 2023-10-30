@@ -38,6 +38,16 @@ public class Main
         calendarContext.addEvent(LocalDate.parse(nowDate.plusDays(5).toString()), "Meeting 4", "", "");
 
 
+
+
+/*        try {
+            MainParser.parse("fileexample.txt");
+            System.out.println("Parsed successfully");
+
+        } catch (IOException | org.example.calendar.javaccparser.ParseException e) {
+            System.out.println(e);
+        }*/
+
         calendarContext.startCalendar();
     }
 }
