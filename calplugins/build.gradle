@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'edu.curtin'
+group = 'edu.curtin.calplugins'
 version = '1.0-SNAPSHOT'
 
 repositories {
