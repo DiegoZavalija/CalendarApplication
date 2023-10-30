@@ -39,9 +39,6 @@ List<CalendarEvent> File() :
 {
     List<CalendarEvent> events = new ArrayList<>();
     CalendarEvent event;
-
-    { return events; }
-    <EOF>
 }
 {
     (
@@ -52,6 +49,7 @@ List<CalendarEvent> File() :
         Script()
     )*
     <EOF>
+    { return events; }
 }
 
 CalendarEvent Event() :
@@ -84,17 +82,21 @@ CalendarEvent Event() :
 LocalDate Date() :
 {
     String dateStr;
+    LocalDate resultDate;
 }
 {
     dateStr = <DATE>
-    try
     {
-    return LocalDate.parse(dateStr);
+        try
+        {
+            resultDate = LocalDate.parse(dateStr);
+        }
+        catch (DateTimeParseException dtpe)
+        {
+            throw new ParseException("Invalid date format: " + dateStr);
+        }
     }
-    catch (DateTimeParseException dtpe)
-    {
-        throw new ParseException("Invalid date format: " + dateStr);
-    }
+    { return resultDate; }
 }
 
 LocalTime Time() :

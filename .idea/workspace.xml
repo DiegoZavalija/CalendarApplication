@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Test parser">
-      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/Fileparser.jj" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="new Fileparser.jj">
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/FileParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/FileParserConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/FileParserTokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/ParseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/SimpleCharStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/TokenMgrError.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/DSLParser.jj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/MyDSLParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/MyDSLParserConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/MyDSLParserTokenManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/ParseException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/SimpleCharStream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/Token.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/TokenMgrError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/Fileparser.jj" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileparser/Fileparser.jj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +153,7 @@
       <workItem from="1698577769692" duration="281000" />
       <workItem from="1698578057272" duration="330000" />
       <workItem from="1698578394255" duration="122000" />
-      <workItem from="1698578522801" duration="6577000" />
+      <workItem from="1698578522801" duration="8614000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -325,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698632242580</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="new Fileparser.jj">
+      <option name="closed" value="true" />
+      <created>1698634579501</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1698634579501</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +374,7 @@
     <MESSAGE value="Fixed change locale method" />
     <MESSAGE value="Fixed PMD violation for the change locale method" />
     <MESSAGE value="Test parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test parser" />
+    <MESSAGE value="new Fileparser.jj" />
+    <option name="LAST_COMMIT_MESSAGE" value="new Fileparser.jj" />
   </component>
 </project>
