@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Fixed PMD violation for the change locale method">
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/EventManager.java" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Not much">
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/DSLParser.jj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/MyDSLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/MyDSLParserConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/MyDSLParserTokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/ParseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/SimpleCharStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/fileops/TokenMgrError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,34 +64,38 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: -1
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": -1
+}]]></component>
   <component name="ProjectId" id="2XIFWIGMdBWVDJtUhureqOg0O1o" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Internationalisation&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-19&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dsl",
+    "jdk.selected.JAVA_MODULE": "corretto-19",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/coreapp" />
@@ -89,7 +104,7 @@
       <recent name="$PROJECT_DIR$/library/src/main/java/org" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CalendarApp:coreapp [run]">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.corecalendar.calendarlogic.Main" />
       <module name="CalendarApp.coreapp.main" />
@@ -121,8 +136,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CalendarApp:coreapp [run]" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.CalendarApp:coreapp [run]" />
         <item itemvalue="Gradle.CalendarApp:coreapp [run]" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.CalendarApp:coreapp [run]" />
@@ -138,6 +153,10 @@
       <option name="presentableId" value="Default" />
       <updated>1698308717130</updated>
       <workItem from="1698308718128" duration="16202000" />
+      <workItem from="1698577769692" duration="281000" />
+      <workItem from="1698578057272" duration="330000" />
+      <workItem from="1698578394255" duration="122000" />
+      <workItem from="1698578522801" duration="4295000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -305,6 +324,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.jj" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -317,6 +339,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Gradle changes" />
     <MESSAGE value="Added terminal grid reference to gradle" />
