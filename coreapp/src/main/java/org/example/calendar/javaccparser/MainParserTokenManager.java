@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.Duration;
 import java.util.List;
 import java.util.ArrayList;
-import org.example.calendar.calendarstructs.*;
+import calendarstructs.*;
 
 /** Token Manager. */
 @SuppressWarnings ("unused")
