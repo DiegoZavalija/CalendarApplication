@@ -58,7 +58,7 @@ public class CalendarContext
 
         System.out.println("Enter the title of the event: ");
         String searchInput = sc.nextLine();
-        String trimmedInput = Normalizer.normalize(searchInput.trim(), Normalizer.Form.NFC);
+        String trimmedInput = Normalizer.normalize(searchInput.trim(), Normalizer.Form.NFC); // More normalising
         CalendarEvent event = eventManager.searchEvent(trimmedInput);
         if (event != null)
         {

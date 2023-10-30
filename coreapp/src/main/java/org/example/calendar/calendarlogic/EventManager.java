@@ -79,6 +79,7 @@ public class EventManager
             }
             else if (!event.isAllDayEvent() && event instanceof TimeOfDayEvent timedEvent)
             {
+                // Checking if the provided time falls within the event's time duration
                 if (timedEvent.getDate().equals(date) &&
                         !timedEvent.getEventTime().isAfter(time) &&
                         timedEvent.getEventTime().plus(timedEvent.getEventDuration()).isAfter(time))
@@ -87,6 +88,7 @@ public class EventManager
                 }
             }
         }
+        // No event was found
         return null;
     }
 
@@ -107,7 +109,7 @@ public class EventManager
                 {
                     // Output the matching event details
                     System.out.println(event);
-                    return event; // Exit the method after finding the first match
+                    return event; // Exiting the method after finding the first match
                 }
             }
         }

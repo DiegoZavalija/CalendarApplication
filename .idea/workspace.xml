@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Notify plugin">
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="gradle modifications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calplugins/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/calplugins/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/CalendarContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/CalendarContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/calendarlogic/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/display/CalendarDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/display/CalendarDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/terminalops/TerminalGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/terminalops/TerminalGrid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698670365738</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="gradle modifications">
+      <option name="closed" value="true" />
+      <created>1698670883329</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1698670883329</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +398,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added terminal grid reference to gradle" />
     <MESSAGE value="Added new Event.java" />
     <MESSAGE value="CalendarDisplay logic" />
     <MESSAGE value="Display fo the grid is correct" />
@@ -414,7 +422,8 @@
     <MESSAGE value="Changed repeat plugin" />
     <MESSAGE value="Fixed import in parser" />
     <MESSAGE value="Notify plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notify plugin" />
+    <MESSAGE value="gradle modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="gradle modifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

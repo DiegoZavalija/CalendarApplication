@@ -25,6 +25,7 @@ public class CalendarDisplay
                 "─", "╌", "─",
                 "╭─", "─╮", "╰─", "─╯",
                 "─┬─", "─┴─", "├╌", "╌┤", "╌┼╌"));
+        terminalGrid.setTerminalWidth(150);
     }
 
 

@@ -50,7 +50,7 @@ public class TerminalGrid
         "| ", " | ", " |", "-", "-", "-", "/-", "-\\", "\\-", "-/", "-+-", "-+-", "+-", "-+", "-+-");*/
 
     private final PrintStream out;
-    private final int terminalWidth;
+    private int terminalWidth;
     private BoxChars boxChars = UNICODE_BOX_CHARS;
     
     public static TerminalGrid create()
@@ -78,10 +78,10 @@ public class TerminalGrid
      * Note: auto-detection may not work when running inside Gradle (i.e., "./gradlew run"), 
      * because in this environment we don't directly have access to the terminal. If the 
      */
-/*    public void setTerminalWidth(int terminalWidth)
+    public void setTerminalWidth(int terminalWidth)
     {
         this.terminalWidth = terminalWidth;
-    }*/
+    }
     
     /**
      * Chooses how to draw the table lines. TerminalGrid has two pre-defined constants that will
