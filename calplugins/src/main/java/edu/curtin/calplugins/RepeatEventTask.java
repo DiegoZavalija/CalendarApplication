@@ -1,4 +1,4 @@
-package edu.curtin.calplugins.repeat;
+package edu.curtin.calplugins;
 
 import calendarstructs.AllDayEvent;
 import calendarstructs.CalendarEvent;

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Fixed import in parser">
-      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/hardcodedparser/TempHardCodedCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/Notify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/NotifyEventTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/repeat/Repeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/Repeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/repeat/RepeatEventTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/RepeatEventTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coreapp/calendar.utf8.cal" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/calendar.utf8.cal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" afterDir="false" />
     </list>
@@ -68,27 +71,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "api",
-    "jdk.selected.JAVA_MODULE": "corretto-19",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "/Users/diegozavalija/Desktop/SEC_Assignment2/Calendar/CalendarApp/calplugins/src/main/java/edu/curtin/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;api&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-19&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/diegozavalija/Desktop/SEC_Assignment2/Calendar/CalendarApp/calplugins/src/main/java/edu/curtin/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/coreapp" />

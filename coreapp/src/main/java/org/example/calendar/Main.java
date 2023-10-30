@@ -17,11 +17,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-        if (args.length > 0)
-        {
-            String filename = args[0];
-            System.out.println(filename);
-        }
 
         LocalTime curTime = LocalTime.now();
         LocalDate nowDate = LocalDate.now();
@@ -40,17 +35,22 @@ public class Main
         System.out.println(event1);
         System.out.println(event2);
 
-        List<CalendarEvent> calendarEvents = TempHardCodedCalendar.readEventsFromFile("calendar.utf8.cal");
-
-        for (CalendarEvent event: calendarEvents)
-        {
-            calendarContext.addEvent(event);
-        }
-
         calendarContext.addEvent(event1);
         calendarContext.addEvent(event2);
         calendarContext.addEvent(LocalDate.parse(nowDate.plusDays(4).toString()), "Meeting 3", "10:30", "2");
         calendarContext.addEvent(LocalDate.parse(nowDate.plusDays(5).toString()), "Meeting 4", "", "");
+
+        if (args.length > 0)
+        {
+            String filename = args[0];
+            System.out.println(filename);
+            List<CalendarEvent> calendarEvents = TempHardCodedCalendar.readEventsFromFile("calendar.utf8.cal");
+
+            for (CalendarEvent event: calendarEvents)
+            {
+                calendarContext.addEvent(event);
+            }
+        }
 
         calendarContext.startCalendar();
 

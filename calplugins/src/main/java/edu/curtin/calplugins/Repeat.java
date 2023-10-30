@@ -1,4 +1,4 @@
-package edu.curtin.calplugins.repeat;
+package edu.curtin.calplugins;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 
