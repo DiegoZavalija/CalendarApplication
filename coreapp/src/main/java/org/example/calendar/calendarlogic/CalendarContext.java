@@ -1,7 +1,7 @@
 package org.example.calendar.calendarlogic;
-import org.example.calendar.calendarstructs.AllDayEvent;
-import org.example.calendar.calendarstructs.CalendarEvent;
-import org.example.calendar.calendarstructs.TimeOfDayEvent;
+import calendarstructs.CalendarEvent;
+import calendarstructs.TimeOfDayEvent;
+import calendarstructs.AllDayEvent;
 
 import java.text.Normalizer;
 import java.time.*;

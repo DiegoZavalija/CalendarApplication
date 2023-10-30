@@ -1,9 +1,9 @@
 package org.example.calendar;
 
 import org.example.calendar.calendarlogic.CalendarContext;
-import org.example.calendar.calendarstructs.AllDayEvent;
-import org.example.calendar.calendarstructs.CalendarEvent;
-import org.example.calendar.calendarstructs.TimeOfDayEvent;
+import calendarstructs.AllDayEvent;
+import calendarstructs.CalendarEvent;
+import calendarstructs.TimeOfDayEvent;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

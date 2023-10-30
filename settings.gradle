@@ -2,4 +2,5 @@ rootProject.name = 'CalendarApp'
 include 'coreapp'
 include 'library'
 include 'calplugins'
+include 'calapi'
 

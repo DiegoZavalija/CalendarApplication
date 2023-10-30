@@ -1,5 +1,6 @@
-package org.example.calendar.calendarstructs;
-import java.time.*;
+package calendarstructs;
+
+import java.time.LocalDate;
 
 public abstract class CalendarEvent
 {
