@@ -54,6 +54,11 @@ public class RepeatEventTask extends DefaultTask {
         return repeat;
     }
 
+    public List<CalendarEvent> getEvents()
+    {
+        return events;
+    }
+
     @TaskAction
     public void createEvents()
     {

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Better terminal display width">
-      <change beforePath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/RepeatEventTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/calplugins/src/main/java/edu/curtin/calplugins/RepeatEventTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/display/CalendarDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/display/CalendarDisplay.java" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Modified notify">
+      <change afterPath="$PROJECT_DIR$/calapi/src/main/java/edu/curtin/pluginapi/CalendarApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calapi/src/main/java/edu/curtin/pluginapi/CalendarApiOps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calapi/src/main/java/edu/curtin/pluginapi/CalendarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calapi/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/calapi/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,15 +53,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="api" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: -1
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2XIFWIGMdBWVDJtUhureqOg0O1o" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,7 +76,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;api&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-19&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -148,6 +151,7 @@
       <workItem from="1698578057272" duration="330000" />
       <workItem from="1698578394255" duration="122000" />
       <workItem from="1698578522801" duration="18746000" />
+      <workItem from="1698672314076" duration="1634000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -429,16 +433,5 @@
     <MESSAGE value="gradle modifications" />
     <MESSAGE value="Better terminal display width" />
     <option name="LAST_COMMIT_MESSAGE" value="Better terminal display width" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/calapi/src/main/java/edu/curtin/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
