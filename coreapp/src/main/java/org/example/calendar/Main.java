@@ -1,5 +1,4 @@
 package org.example.calendar;
-
 import org.example.calendar.calendarlogic.CalendarContext;
 import calendarstructs.AllDayEvent;
 import calendarstructs.CalendarEvent;
@@ -53,7 +52,5 @@ public class Main
         }
 
         calendarContext.startCalendar();
-
-
     }
 }
