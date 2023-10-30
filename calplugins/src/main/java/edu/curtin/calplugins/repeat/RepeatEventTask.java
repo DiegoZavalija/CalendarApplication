@@ -1,8 +1,8 @@
 package edu.curtin.calplugins.repeat;
 
-import org.example.calendar.calendarstructs.AllDayEvent;
-import org.example.calendar.calendarstructs.CalendarEvent;
-import org.example.calendar.calendarstructs.TimeOfDayEvent;
+import calendarstructs.AllDayEvent;
+import calendarstructs.CalendarEvent;
+import calendarstructs.TimeOfDayEvent;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 

@@ -1,5 +1,4 @@
 package edu.curtin.calplugins.repeat;
-import edu.curtin.calplugins.repeat.RepeatEventTask;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 
