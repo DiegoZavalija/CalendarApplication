@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Changed repeat plugin">
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Fixed import in parser">
+      <change afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/hardcodedparser/TempHardCodedCalendar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/calendar.utf8.cal" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/calendar.utf8.cal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/coreapp/src/main/java/org/example/calendar/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "api",
     "jdk.selected.JAVA_MODULE": "corretto-19",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -348,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698660301168</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fixed import in parser">
+      <option name="closed" value="true" />
+      <created>1698666050328</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1698666050328</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +381,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Gradle changes" />
     <MESSAGE value="Added terminal grid reference to gradle" />
     <MESSAGE value="Added new Event.java" />
@@ -395,6 +405,18 @@
     <MESSAGE value="FileParser classes implemented, ready to use" />
     <MESSAGE value="Repeat plugin" />
     <MESSAGE value="Changed repeat plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed repeat plugin" />
+    <MESSAGE value="Fixed import in parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed import in parser" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/calapi/src/main/java/edu/curtin/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
