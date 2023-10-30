@@ -6,22 +6,23 @@ import java.util.List;
 
 public class CalendarApiOps implements CalendarApi
 {
+    CalendarService calendarService = new CalendarService();
 
     @Override
     public void addEventToCalendar(CalendarEvent event)
     {
-
+        calendarService.addEvent(event);
     }
 
     @Override
     public List<CalendarEvent> searchEventsByText(String text)
     {
-        return null;
+        return calendarService.notifyForEvent(text);
     }
 
     @Override
     public List<CalendarEvent> createRepeatedEvents(String title, String startDate, String startTime, String duration, int repeat)
     {
-        return null;
+        return calendarService.generateRepeatedEvents(title, startDate, startTime, duration, repeat);
     }
 }
