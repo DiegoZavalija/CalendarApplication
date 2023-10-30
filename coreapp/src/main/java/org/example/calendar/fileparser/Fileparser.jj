@@ -1,0 +1,142 @@
+PARSER_BEGIN(FileParser)
+import java.io.*;
+import java.time.LocalTime;
+import java.time.LocalDate;
+import java.time.Duration;
+import java.util.List;
+import java.util.ArrayList;
+
+public class FileParser
+{
+    public static void parse(String filename) throws IOException, ParseException
+    {
+        FileParser p = new FileParser(new FileInputStream(filename));
+        p.dsl();
+    }
+}
+PARSER_END(FileParser)
+
+TOKEN :
+{
+    < EVENT: "event" >
+  | < PLUGIN: "plugin" >
+  | < SCRIPT: "script" >
+  | < DATE: "2" ("0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9")
+             (["0"-"9"])(["0"-"9"]) "-" (["0"-"1"])(["0"-"9"]) "-" (["0"-"3"])(["0"-"9"]) >
+  | < TIME: (["0"-"2"])(["0"-"9"]) ":" (["0"-"5"])(["0"-"9"]) ":" (["0"-"5"])(["0"-"9"]) >
+  | < DURATION: (["0"-"9"])+ >
+  | < ALL_DAY: "all-day" >
+  | < STRING: "\"" (~["\""])* "\"" >
+  | < CLASS_NAME: (<JAVA_ID> ".")* <JAVA_ID> >
+}
+
+TOKEN :
+{
+    < JAVA_ID: ["a"-"z","A"-"Z","_","$"] (["a"-"z","A"-"Z","0"-"9","_","$"])* >
+}
+
+List<CalendarEvent> File() :
+{
+    List<CalendarEvent> events = new ArrayList<>();
+    CalendarEvent event;
+
+    { return events; }
+    <EOF>
+}
+{
+    (
+        event=Event() { System.out.println(event); events.add(event); }
+    |
+        Plugin()
+    |
+        Script()
+    )*
+    <EOF>
+}
+
+CalendarEvent Event() :
+{
+    LocalDate eventDate;
+    String eventTitle;
+    LocalTime eventTime;
+    Duration eventDuration;
+    CalendarEvent event;
+}
+
+{
+    <EVENT> eventDate=Date()
+    (
+        eventTime=Time() eventDuration=Duration()
+        <STRING> eventTitle=StringLiteral()
+        {
+            event = new TimeOfDayEvent(eventDate, eventTitle, eventTime, eventDuration);
+        }
+    |
+        <ALL_DAY>
+        <STRING> eventTitle=StringLiteral()
+        {
+            event = new AllDayEvent(eventDate, eventTitle);
+        }
+    )
+    { return event; }
+}
+
+LocalDate Date() :
+{
+    String dateStr;
+}
+{
+    dateStr = <DATE>
+    try
+    {
+    return LocalDate.parse(dateStr);
+    }
+    catch (DateTimeParseException dtpe)
+    {
+        throw new ParseException("Invalid date format: " + dateStr);
+    }
+}
+
+LocalTime Time() :
+{
+    String timeStr;
+}
+{
+    timeStr = <TIME> { return LocalTime.parse(timeStr); }
+}
+
+Duration Duration() :
+{
+    String durationStr;
+}
+{
+    durationStr = <DURATION> { return Duration.ofHours(Long.parseLong(durationStr)); }
+}
+
+String StringLiteral() :
+{
+    Token t;
+}
+{
+    t = <STRING> { return t.image.substring(1, t.image.length() - 1); } // Strip the quotes
+}
+
+void Plugin() :
+{}
+{
+    <PLUGIN> <CLASS_NAME> "{" Arguments() "}"
+}
+
+void Arguments() :
+{}
+{
+    ( <JAVA_ID> ":" <STRING> ("," <JAVA_ID> ":" <STRING> )* )?
+}
+
+void Script() :
+{}
+{
+    <SCRIPT> <STRING>
+}
+
+SKIP : { " " | "\n" | "\r" | "\t" | <"//" (~["\n","\r"])* ("\n"|"\r"|"\r\n")> }
