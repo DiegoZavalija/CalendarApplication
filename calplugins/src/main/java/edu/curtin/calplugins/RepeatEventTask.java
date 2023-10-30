@@ -19,7 +19,6 @@ public class RepeatEventTask extends DefaultTask {
     private final String duration;
     private final int repeat;
 
-    // List to hold created calendar events which extend up to the selected amount of repeats
     private final List<CalendarEvent> events = new ArrayList<>();
 
     public RepeatEventTask(String title, String startDate, String startTime, String duration, int repeat) {
@@ -64,7 +63,8 @@ public class RepeatEventTask extends DefaultTask {
         while (date.isBefore(end))
         {
             CalendarEvent event;
-            if (startTime == null || duration == null) {
+            if (startTime == null || duration == null)
+            {
                 // All day event
                 event = new AllDayEvent(date, getTitle());
             }
@@ -81,9 +81,10 @@ public class RepeatEventTask extends DefaultTask {
             date = date.plusDays(getRepeat());
         }
 
-        for (CalendarEvent e : events)
+        // Printing out created events
+        for (CalendarEvent event : events)
         {
-            System.out.println(e);
+            System.out.println(event);
         }
     }
 }

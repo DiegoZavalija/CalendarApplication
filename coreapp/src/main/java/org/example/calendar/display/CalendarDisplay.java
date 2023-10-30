@@ -4,6 +4,7 @@ import terminalops.TerminalGrid;
 import java.util.ArrayList;
 import java.util.List;
 
+// Inm charge of the display of the calendar. Takes the headings and rows and displays the calendar.
 public class CalendarDisplay
 {
     private final TerminalGrid terminalGrid = TerminalGrid.create();
