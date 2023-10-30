@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Api">
-      <change beforePath="$PROJECT_DIR$/calapi/src/main/java/edu/curtin/pluginapi/CalendarApiOps.java" beforeDir="false" afterPath="$PROJECT_DIR$/calapi/src/main/java/edu/curtin/pluginapi/CalendarApiOps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calapi/src/main/java/edu/curtin/pluginapi/CalendarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/calapi/src/main/java/edu/curtin/pluginapi/CalendarService.java" afterDir="false" />
+    <list default="true" id="f105083f-e7d4-47f3-98c4-d226eeeca86c" name="Changes" comment="Api implementation">
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/terminalops/TerminalGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/terminalops/TerminalGrid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +147,7 @@
       <workItem from="1698578057272" duration="330000" />
       <workItem from="1698578394255" duration="122000" />
       <workItem from="1698578522801" duration="18746000" />
-      <workItem from="1698672314076" duration="2128000" />
+      <workItem from="1698672314076" duration="2484000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -390,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698674233405</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Api implementation">
+      <option name="closed" value="true" />
+      <created>1698674733993</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1698674733993</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +419,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Display fo the grid is correct" />
     <MESSAGE value="More Calendar structs" />
     <MESSAGE value="More progress into the logic" />
     <MESSAGE value="DateRange for display" />
@@ -437,6 +443,7 @@
     <MESSAGE value="gradle modifications" />
     <MESSAGE value="Better terminal display width" />
     <MESSAGE value="Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api" />
+    <MESSAGE value="Api implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api implementation" />
   </component>
 </project>
